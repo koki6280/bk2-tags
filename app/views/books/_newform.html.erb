@@ -1,5 +1,9 @@
 <button id="tutorial"> チュートリアル開始 </button>
 <%= form_for(book) do |f| %>
+    <div class="field row">
+    	<%= f.label :tag_list, 'タグ' %>
+    	<%= f.text_field :tag_list, value: @book.tag_list.join(','), id: 'tags' %>
+    </div>
 	<div class="field row">
 		<%= f.label :title %>
 		<%= f.text_field :title, class: "col-xs-12 book_title", id: 'introjs-step1' %>

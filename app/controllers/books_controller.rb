@@ -50,7 +50,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :body, :row_order_position)
+    params.require(:book).permit(:title, :body, :row_order_position, :tag_list)
   end
 
   def ensure_correct_user

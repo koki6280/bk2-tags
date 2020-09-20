@@ -1,5 +1,6 @@
 class Book < ApplicationRecord
-	include RankedModel 
+  acts_as_taggable
+	include RankedModel
 	ranks :row_order
   belongs_to :user
   has_many :favorites, dependent: :destroy
